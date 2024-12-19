@@ -1,3 +1,6 @@
-mkdir -pm755 /etc/apt/keyrings
-wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
-wget -nc -P /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/bullseye/winehq-bullseye.sources
+wget https://dl.winehq.org/wine/source/9.0/wine-9.0.tar.xz
+tar -xvf wine-9.0.tar.xz
+cd wine-9.0/
+sudo ./configure 
+sudo ./configure --enable-win64
+sudo make && sudo make install
