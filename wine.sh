@@ -1,1 +1,7 @@
-wine ~/.wine/drive_c/windows/profiles/$USER/Local\ Settings/Application\ Data/Google/Chrome/Application/chrome.exe --new-http --in-process-plugins [4]
+git clone https://github.com/libsdl-org/SDL.git -b SDL2
+cd SDL
+mkdir build
+cd build
+../configure
+make
+sudo make install
