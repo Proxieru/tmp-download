@@ -1,7 +1,1 @@
-git clone https://github.com/libsdl-org/SDL.git -b SDL2
-cd SDL
-mkdir build
-cd build
-../configure
-make
-make install
+wget https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_11.2.1_build/ghidra_11.2.1_PUBLIC_20241105.zip
