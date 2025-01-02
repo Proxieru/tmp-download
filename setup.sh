@@ -1,4 +1,9 @@
-apt install wine64
+sudo dpkg --add-architecture i386
+sudo mkdir -pm755 /etc/apt/keyrings
+sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
+sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/bullseye/winehq-bullseye.sources
+sudo apt update
+sudo apt install --install-recommends winehq-stable
 dpkg --add-architecture i386 && apt-get update && apt-get install wine32
 wget https://dl.winehq.org/wine/wine-mono/9.4.0/wine-mono-9.4.0-x86.msi
 wine msiexec /i wine-mono-7.5.0-x86.msi
