@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script to remove Wine 5 and install the latest Wine version on Debian
+# Script to remove Wine 5 and install the latest Wine version on Debian 11 (Bullseye)
 
 # Function to print messages
 log() {
@@ -28,23 +28,17 @@ log "Adding WineHQ key..."
 mkdir -pm755 /etc/apt/keyrings
 wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
 
-# Detect Debian version codename
-log "Detecting Debian version codename..."
-CODENAME=$(lsb_release -cs)
-if [ -z "$CODENAME" ]; then
-    echo "Could not determine your Debian version codename. Please verify manually."
-    exit 1
-fi
-
-log "Detected codename: $CODENAME"
-
-# Add WineHQ repository
-log "Adding WineHQ repository..."
-wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/$CODENAME.sources
+# Add the official WineHQ repository for Debian 11 (Bullseye)
+log "Adding WineHQ repository for Debian 11..."
+echo "deb [signed-by=/etc/apt/keyrings/winehq-archive.key] https://dl.winehq.org/wine-builds/debian/ bullseye main" > /etc/apt/sources.list.d/winehq.list
 
 # Update package lists
 log "Updating package lists..."
 apt update
+
+# Install Wine dependencies
+log "Installing Wine dependencies..."
+apt install -y winehq-stable wine32 wine64
 
 # Install the latest Wine stable version
 log "Installing the latest Wine stable version..."
