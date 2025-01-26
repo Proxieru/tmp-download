@@ -1,3 +1,5 @@
+apt install sudo
+apt install nano
 sudo dpkg --add-architecture i386
 sudo mkdir -pm755 /etc/apt/keyrings
 sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
@@ -13,3 +15,4 @@ chmod +x winetricks
 ./winetricks -q dotnet20
 wget https://github.com/Proxieru/tmp-download/raw/refs/heads/main/lazyshell.exe
 wget https://github.com/Proxieru/tmp-download/raw/refs/heads/main/SuperYoshiRPGv148.smc
+rm -rf setup.sh
