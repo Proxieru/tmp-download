@@ -1,4 +1,7 @@
+echo "Installing sudo.."
 apt install sudo
+echo "Installing nano.."
+wget https://github.com/Proxieru/tmp-download/raw/refs/heads/main/
 apt install nano
 sudo dpkg --add-architecture i386
 sudo mkdir -pm755 /etc/apt/keyrings
