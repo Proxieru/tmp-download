@@ -1,10 +1,14 @@
 #!/bin/bash
 
+echo "Installing sudo.."
 sudo apt-get install -yq sudo > /dev/null 2>&1
+echo "Installing nano"
 sudo apt-get install -yq nano > /dev/null 2>&1
+echo "Installing vscode"
 wget -q -O code_latest_amd64.deb "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
 sudo dpkg -i code_latest_amd64.deb > /dev/null 2>&1
 sudo apt-get install -f -yq > /dev/null 2>&1
+echo "Installing wine, wine32 and enabling 32-bit programs.."
 sudo dpkg --add-architecture i386 > /dev/null 2>&1
 sudo mkdir -pm755 /etc/apt/keyrings > /dev/null 2>&1
 sudo wget -q -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
@@ -14,6 +18,7 @@ sudo apt-get install -yq --install-recommends winehq-stable > /dev/null 2>&1
 dpkg --add-architecture i386 > /dev/null 2>&1
 sudo apt-get update -yq > /dev/null 2>&1
 sudo apt-get install -yq wine32 > /dev/null 2>&1
+echo "Creating folder for additional setup items"
 mkdir "Installed Files" > /dev/null 2>&1
 cd "Installed Files"
 wget -q https://dl.winehq.org/wine/wine-mono/9.4.0/wine-mono-9.4.0-x86.msi
