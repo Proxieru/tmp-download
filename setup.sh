@@ -8,6 +8,10 @@ echo "Installing vscode"
 wget -q -O code_latest_amd64.deb "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
 sudo dpkg -i code_latest_amd64.deb > /dev/null 2>&1
 sudo apt-get install -f -yq > /dev/null 2>&1
+echo "Installing zsnes.."
+apt install zsnes
+echo "Installing surf.. (web browser)"
+apt install surf
 echo "Installing wine, wine32 and enabling 32-bit programs.."
 sudo dpkg --add-architecture i386 > /dev/null 2>&1
 sudo mkdir -pm755 /etc/apt/keyrings > /dev/null 2>&1
