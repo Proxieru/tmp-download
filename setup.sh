@@ -12,6 +12,8 @@ echo "Installing zsnes.."
 apt install zsnes
 echo "Installing surf.. (web browser)"
 apt install surf
+echo "Installing hardinfo.."
+apt install hardinfo
 echo "Installing wine, wine32 and enabling 32-bit programs.."
 sudo dpkg --add-architecture i386 > /dev/null 2>&1
 sudo mkdir -pm755 /etc/apt/keyrings > /dev/null 2>&1
@@ -32,7 +34,7 @@ wget -q https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winet
 chmod +x winetricks > /dev/null 2>&1
 ./winetricks -q dotnet20 > /dev/null 2>&1
 wget -q https://github.com/Proxieru/tmp-download/raw/refs/heads/main/lazyshell.exe
-wget -q https://github.com/Proxieru/tmp-download/raw/refs/heads/main/SuperYoshiRPGv148.smc
+wget -q https://github.com/Proxieru/tmp-download/raw/refs/heads/main/SuperYoshiRPGv1.sfc
 cd ..
 wine --version > /dev/null 2>&1
 rm -rf setup.sh
