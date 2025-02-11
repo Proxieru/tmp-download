@@ -1,13 +1,14 @@
 #!/bin/bash
-
+echo "Installing unzip.."
+apt install unzip
+wget https://github.com/Proxieru/tmp-download/raw/refs/heads/main/disassembler.zip
+mkdir disassembler
+cd disassembler
+unzip disassembler.zip
 echo "Installing sudo.."
 sudo apt-get install -yq sudo > /dev/null 2>&1
 echo "Installing nano"
 sudo apt-get install -yq nano > /dev/null 2>&1
-echo "Installing vscode"
-wget -q -O code_latest_amd64.deb "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
-sudo dpkg -i code_latest_amd64.deb > /dev/null 2>&1
-sudo apt-get install -f -yq > /dev/null 2>&1
 echo "Installing zsnes.."
 apt install zsnes
 echo "Installing surf.. (web browser)"
@@ -24,9 +25,14 @@ sudo apt-get install -yq --install-recommends winehq-stable > /dev/null 2>&1
 dpkg --add-architecture i386 > /dev/null 2>&1
 sudo apt-get update -yq > /dev/null 2>&1
 sudo apt-get install -yq wine32 > /dev/null 2>&1
+echo "Installing vscode"
+wget -q -O code_latest_amd64.deb "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
+sudo dpkg -i code_latest_amd64.deb > /dev/null 2>&1
+sudo apt-get install -f -yq > /dev/null 2>&1
 echo "Creating folder for additional setup items"
 mkdir "Installed Files" > /dev/null 2>&1
 cd "Installed Files"
+mv disassembler.zip "Installed Files"
 wget -q https://dl.winehq.org/wine/wine-mono/9.4.0/wine-mono-9.4.0-x86.msi
 wine msiexec /i wine-mono-7.5.0-x86.msi /quiet > /dev/null 2>&1
 wine msiexec /i wine_gecko-2.47.3-x86.msi /quiet > /dev/null 2>&1
