@@ -6,7 +6,7 @@ mkdir disassembler
 cd disassembler
 unzip disassembler.zip
 echo "Installing sudo.."
-sudo apt-get install -yq sudo > /dev/null 2>&1
+apt-get install -yq sudo > /dev/null 2>&1
 echo "Installing nano"
 sudo apt-get install -yq nano > /dev/null 2>&1
 echo "Installing zsnes.."
@@ -31,7 +31,6 @@ sudo dpkg -i code_latest_amd64.deb > /dev/null 2>&1
 sudo apt-get install -f -yq > /dev/null 2>&1
 echo "Creating folder for additional setup items"
 mkdir "Installed Files" > /dev/null 2>&1
-cd "Installed Files"
 mv disassembler.zip "Installed Files"
 wget -q https://dl.winehq.org/wine/wine-mono/9.4.0/wine-mono-9.4.0-x86.msi
 wine msiexec /i wine-mono-7.5.0-x86.msi /quiet > /dev/null 2>&1
