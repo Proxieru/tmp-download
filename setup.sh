@@ -28,7 +28,7 @@ sudo apt-get install -yq wine32 > /dev/null 2>&1
 echo "Installing vscode"
 wget -q -O code_latest_amd64.deb "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
 sudo dpkg -i code_latest_amd64.deb > /dev/null 2>&1
-sudo apt-get install -f -yq > /dev/null 2>&1
+sudo apt-get install -f -y
 echo "Creating folder for additional setup items"
 mkdir "Installed Files" > /dev/null 2>&1
 mv disassembler.zip "Installed Files"
