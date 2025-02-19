@@ -5,6 +5,7 @@ wget https://github.com/Proxieru/tmp-download/raw/refs/heads/main/disassembler.z
 mkdir disassembler
 cd disassembler
 unzip disassembler.zip
+cd ..
 echo "Installing sudo.."
 apt-get install -yq sudo > /dev/null 2>&1
 echo "Installing nano"
@@ -38,8 +39,10 @@ wine msiexec /i wine_gecko-2.47.3-x86.msi /quiet > /dev/null 2>&1
 wget -q https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
 chmod +x winetricks > /dev/null 2>&1
 ./winetricks -q dotnet20 > /dev/null 2>&1
-wget -q https://github.com/Proxieru/tmp-download/raw/refs/heads/main/lazyshell.exe
+wget -q https://github.com/Yakibomb/LAZYSHELL-UPDATED/releases/download/v2.0.1/LAZYSHELL++.exe
+wget -q https://github.com/Proxieru/tmp-download/raw/refs/heads/main/smrpg.sfc
 wget -q https://github.com/Proxieru/tmp-download/raw/refs/heads/main/SuperYoshiRPGv1.sfc
+wget -q https://github.com/MinicraftPlus/minicraft-plus-revived/releases/download/v2.2.1/minicraft-plus-2.2.1.jar
 cd ..
 wine --version > /dev/null 2>&1
 rm -rf setup.sh
