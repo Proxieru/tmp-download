@@ -24,11 +24,11 @@ label = tk.Label(root, text="Options")
 label.pack()
 
 # Create a button that calls `on_button_click` when pressed
-genbutton = tk.Button(root, text="Generate fake files", command=generatefiles)
-gencustombutton = tk.Button(root, text="Generate fake files with custom size", command=on_button_click)
-genviewbutton = tk.Button(root, text="View generated fake files", command=on_button_click)
-gendeletebutton = tk.Button(root, text="Delete all fake files", command=on_button_click)
-quitbutton = tk.Button(root, text="Quit (and fail your tasks)", command=quit)
+genbutton = tk.Button(page2, text="Generate fake files", command=generatefiles)
+gencustombutton = tk.Button(page2, text="Generate fake files with custom size", command=on_button_click)
+genviewbutton = tk.Button(page2, text="View generated fake files", command=on_button_click)
+gendeletebutton = tk.Button(page2, text="Delete all fake files", command=on_button_click)
+quitbutton = tk.Button(page2, text="Quit (and fail your tasks)", command=quit)
 
 genbutton.pack()
 gencustombutton.pack()
