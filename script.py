@@ -24,18 +24,6 @@ label = tk.Label(root, text="Options")
 label.pack()
 
 # Create a button that calls `on_button_click` when pressed
-genbutton = tk.Button(page2, text="Generate fake files", command=generatefiles)
-gencustombutton = tk.Button(page2, text="Generate fake files with custom size", command=on_button_click)
-genviewbutton = tk.Button(page2, text="View generated fake files", command=on_button_click)
-gendeletebutton = tk.Button(page2, text="Delete all fake files", command=on_button_click)
-quitbutton = tk.Button(page2, text="Quit (and fail your tasks)", command=quit)
-
-genbutton.pack()
-gencustombutton.pack()
-genviewbutton.pack()
-gendeletebutton.pack()
-quitbutton.pack()
-
 
 def show_page(page):
     page.tkraise()
@@ -57,6 +45,17 @@ tk.Button(page1, text="Go to Page 2", command=lambda: show_page(page2)).pack()
 # Page 2
 tk.Label(page2, text="This is Page 2", font=("Arial", 16)).pack(pady=10)
 tk.Button(page2, text="Back to Page 1", command=lambda: show_page(page1)).pack()
+genbutton = tk.Button(page2, text="Generate fake files", command=generatefiles)
+gencustombutton = tk.Button(page2, text="Generate fake files with custom size", command=on_button_click)
+genviewbutton = tk.Button(page2, text="View generated fake files", command=on_button_click)
+gendeletebutton = tk.Button(page2, text="Delete all fake files", command=on_button_click)
+quitbutton = tk.Button(page2, text="Quit (and fail your tasks)", command=quit)
+
+genbutton.pack()
+gencustombutton.pack()
+genviewbutton.pack()
+gendeletebutton.pack()
+quitbutton.pack()
 
 # Show first page initially
 show_page(page1)
