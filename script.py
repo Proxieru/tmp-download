@@ -1,6 +1,12 @@
 import tkinter as tk
 import os
 from pathlib import Path
+import sys
+
+if hasattr(sys, 'gettrace') and sys.gettrace():
+    print("why are you.. debugging me?")
+else:
+    return
 
 def quit():
     exit()
@@ -39,12 +45,12 @@ for page in (page1, page2):
     page.grid(row=0, column=0, sticky="nsew")
 
 # Page 1
-tk.Label(page1, text="This is Page 1", font=("Arial", 16)).pack(pady=10)
-tk.Button(page1, text="Go to Page 2", command=lambda: show_page(page2)).pack()
+tk.Label(page1, text="Tasks", font=("Arial", 16)).pack(pady=10)
+tk.Button(page1, text="Main menu", command=lambda: show_page(page2)).pack()
 
 # Page 2
-tk.Label(page2, text="This is Page 2", font=("Arial", 16)).pack(pady=10)
-tk.Button(page2, text="Back to Page 1", command=lambda: show_page(page1)).pack()
+tk.Label(page2, text="Tasks", font=("Arial", 16)).pack(pady=10)
+tk.Button(page2, text="Main menu", command=lambda: show_page(page1)).pack()
 genbutton = tk.Button(page2, text="Generate fake files", command=generatefiles)
 gencustombutton = tk.Button(page2, text="Generate fake files with custom size", command=on_button_click)
 genviewbutton = tk.Button(page2, text="View generated fake files", command=on_button_click)
