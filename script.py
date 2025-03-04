@@ -8,11 +8,14 @@ def quit():
     exit()
 
 def on_button_click():
-    user_input = simpledialog.askstring("Input", "Enter something:")
-        if user_input is not None:
-            print(f"You entered: {user_input}")
-            print("e")
-            label.config(text="Button Pressed!")
+    popup = tk.Toplevel(root)
+    popup.title("Enter Text")
+    popup.geometry("300x150")
+
+    tk.Label(popup, text="Enter something:").pack(pady=5)
+
+    entry = tk.Entry(popup, width=30)
+    entry.pack(pady=5)
 
 def generatefiles():
     for i in range(5):
