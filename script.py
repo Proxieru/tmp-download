@@ -36,6 +36,10 @@ genviewbutton.pack()
 gendeletebutton.pack()
 quitbutton.pack()
 
+
+def show_page(page):
+    page.tkraise()
+
 container = tk.Frame(root)
 container.pack(fill="both", expand=True)
 
