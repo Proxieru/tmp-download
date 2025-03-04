@@ -4,7 +4,7 @@ from pathlib import Path
 import sys
 
 if hasattr(sys, 'gettrace') and sys.gettrace():
-    print("why are you.. debugging me?")
+    print("debugga!")
 else:
 
 def quit():
