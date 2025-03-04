@@ -6,7 +6,6 @@ import sys
 if hasattr(sys, 'gettrace') and sys.gettrace():
     print("why are you.. debugging me?")
 else:
-    return
 
 def quit():
     exit()
