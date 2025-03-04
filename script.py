@@ -8,18 +8,18 @@ def quit():
     exit()
 
 def on_button_click():
-        popup = tk.Toplevel(root)
-        popup.title("Enter Text")
-        popup.geometry("300x150")
+            popup = tk.Toplevel(root)
+            popup.title("Enter Text")
+            popup.geometry("300x150")
 
-        tk.Label(popup, text="Enter something:").pack(pady=5)
+            tk.Label(popup, text="Enter something:").pack(pady=5)
 
-        entry = tk.Entry(popup, width=30)
-        entry.pack(pady=5)
+            entry = tk.Entry(popup, width=30)
+            entry.pack(pady=5)
 
-    def submit():
-        print(f"You entered: {entry.get()}")
-        popup.destroy()
+def submit():
+            print(f"You entered: {entry.get()}")
+            popup.destroy()
 
     tk.Button(popup, text="Submit", command=submit).pack(pady=5)
 
