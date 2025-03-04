@@ -10,9 +10,9 @@ def quit():
 def on_button_click():
     user_input = simpledialog.askstring("Input", "Enter something:")
         if user_input is not None:
-        print(f"You entered: {user_input}")
-        print("e")
-        label.config(text="Button Pressed!")
+            print(f"You entered: {user_input}")
+            print("e")
+            label.config(text="Button Pressed!")
 
 def generatefiles():
     for i in range(5):
