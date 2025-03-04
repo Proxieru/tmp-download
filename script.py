@@ -1,5 +1,6 @@
 import tkinter as tk
 import os
+from pathlib import Path
 
 def quit():
     exit()
@@ -7,6 +8,11 @@ def quit():
 def on_button_click():
     print("e")
     label.config(text="Button Pressed!")
+
+def generatefiles():
+    for i in range(5):
+        file = Path(f"example{i}.txt")
+        file.write_text("This is a file created using pathlib!")
 
 
 root = tk.Tk()
