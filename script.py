@@ -21,7 +21,7 @@ genbutton = tk.Button(root, text="Generate fake files", command=on_button_click)
 gencustombutton = tk.Button(root, text="Generate fake files with custome size", command=on_button_click)
 genviewbutton = tk.Button(root, text="View generated fake files", command=on_button_click)
 gendeletebutton = tk.Button(root, text="Delete all fake files", command=on_button_click)
-quitbutton = tk.Button(root, text="Quit", command=Quit)
+quitbutton = tk.Button(root, text="Quit", command=quit)
 
 genbutton.pack()
 gencustombutton.pack()
