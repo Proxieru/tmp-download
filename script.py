@@ -2,7 +2,7 @@ import tkinter as tk
 import os
 
 def quit():
-    os._exit()
+    exit()
 
 def on_button_click():
     print("e")
