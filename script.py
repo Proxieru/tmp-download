@@ -8,6 +8,7 @@ def quit():
     exit()
 
 def on_button_click():
+    buttonbox("hi)
     print("e")
     label.config(text="Button Pressed!")
 
